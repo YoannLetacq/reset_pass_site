@@ -1,0 +1,4 @@
+{
+    "RESET_PASS_ENDPOINT": "http://localhost:3000/user/reset_pass"
+}
+  

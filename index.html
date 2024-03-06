@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Réinitialisation du mot de passe</title>
+    <link rel="stylesheet" href="./style_phone.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="divLogoZ01">
+        <img class="logo" src="../app_client/icons/logo.png" alt="logo">
+    </div>
+    <div class="container">
+        <div class="page_container">
+            <div class="connexion_container">
+                <div class="title">Reset Password</div>
+                <form id="resetPasswordForm">
+                    <ul>
+                        <li><label>New Password</label></li>
+                        <li><input type="password" id="newPassword" class="fill_input" required></li>
+                    </ul>
+                    <ul>
+                        <li><label>Repeat Password</label></li>
+                        <li><input type="password" id="repeatPassword" class="fill_input" required></li>
+                    </ul>
+                    <ul>
+                        <li class="input_li">
+                            <input type="button" id="resetBtn" value="Reset password" class="connexion">
+                        </li>
+                    </ul>
+                </form>
+                <div id="message"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include jQuery and Alertify.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
