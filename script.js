@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const newPassword = document.getElementById('newPassword').value;
                 const repeatPassword = document.getElementById('repeatPassword').value;
+                const verif_code = document.getElementById('verif_code').value;
 
                 if(newPassword !== repeatPassword) {
                     alert("The passwords do not match. Please try again.");
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 const body = {
+                    token: verif_code,
                     newPassword: newPassword,
                     repeatPassword: repeatPassword
                 };
@@ -42,6 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         return;
                     } else if (data.code == "success") {
                         alert(data.message);
+                    } else if (data.code == "invalid_email") {
+                        alert(data.message);
+                    }else if (data.code == "invalid_token") { 
+                        alert(data.message);
+                    } else {
+                        alert("There was an error resetting your password. Please try again.");
                     }
                 })
                 .catch((error) => {
